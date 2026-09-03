@@ -73,3 +73,29 @@ Major subsystems currently being investigated include:
 
 Active project. Findings and schematics are updated as additional nets
 are confirmed.
+
+
+## Control Logic Architecture:
+
+                    CONTROL LOGIC
+                         │
+                         │ control signals
+                         ▼
+                  ┌─────────────┐
+                  │    U6       │
+                  │   MC1413    │
+                  │ Darlington  │
+                  │   Array     │
+                  └──────┬──────┘
+                         │
+                 individual sinks
+                 │   │   │   │   │
+                 ▼   ▼   ▼   ▼   ▼
+                K1  K2  K3  K4  K5
+                 │   │   │   │   │
+                 └───┴───┴───┴───┘
+                         │
+                     LOAD OUTPUTS
+                         │
+                         ▼
+                        J2
